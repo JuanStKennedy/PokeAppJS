@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poke App</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/png"
+    href="https://www.pngkey.com/png/full/144-1446994_pokeball-clipart-transparent-background-pokeball-png.png" />
+</head>
+
+<body>
+  <header class="header">
+    <!-- Logo Section -->
+    <div class="header-top">
+      <div class="pokemon-logo">
+        <img src="https://1000logos.net/wp-content/uploads/2017/05/Pokemon-Logo.png" alt="Pokemon Logo"
+          class="pokemon-logo-img" />
+      </div>
+    </div>
+
+    <!-- Navigation Section -->
+    <nav class="nav">
+      <!-- Title and Theme Toggle -->
+      <div class="nav-top">
+        <div class="title">
+          <img src="https://www.pngkey.com/png/full/144-1446994_pokeball-clipart-transparent-background-pokeball-png.png"
+            alt="Pokeball" class="pokeball" />
+          <h1>Pokédex</h1>
+        </div>
+        
+        <div class="nav-controls">
+          <button id="toggle-theme" class="btn-header theme-toggle" aria-label="Cambiar tema">🌙 Modo Oscuro</button>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú de filtros">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Controls -->
+      <div class="nav-main">
+        <button class="btn btn-header standard" id="ver-todos" aria-label="Ver todos los Pokémon">Ver todos</button>
+        <button class="btn btn-header standard" id="btn-favoritos" aria-label="Ver Pokémon favoritos">Favoritos ⭐</button>
+      </div>
+
+      <!-- Type Filters (collapsible on mobile) -->
+      <div class="nav-filters" id="nav-filters">
+        <h3 class="filters-title">Filtrar por tipo:</h3>
+        <ul class="nav-list">
+          <li class="nav-item"><button class="btn btn-header normal" id="normal" aria-label="Filtrar por tipo Normal">Normal</button></li>
+          <li class="nav-item"><button class="btn btn-header fire" id="fire" aria-label="Filtrar por tipo Fire">Fire</button></li>
+          <li class="nav-item"><button class="btn btn-header water" id="water" aria-label="Filtrar por tipo Water">Water</button></li>
+          <li class="nav-item"><button class="btn btn-header grass" id="grass" aria-label="Filtrar por tipo Grass">Grass</button></li>
+          <li class="nav-item"><button class="btn btn-header electric" id="electric" aria-label="Filtrar por tipo Electric">Electric</button></li>
+          <li class="nav-item"><button class="btn btn-header ice" id="ice" aria-label="Filtrar por tipo Ice">Ice</button></li>
+          <li class="nav-item"><button class="btn btn-header fighting" id="fighting" aria-label="Filtrar por tipo Fighting">Fighting</button></li>
+          <li class="nav-item"><button class="btn btn-header poison" id="poison" aria-label="Filtrar por tipo Poison">Poison</button></li>
+          <li class="nav-item"><button class="btn btn-header ground" id="ground" aria-label="Filtrar por tipo Ground">Ground</button></li>
+          <li class="nav-item"><button class="btn btn-header flying" id="flying" aria-label="Filtrar por tipo Flying">Flying</button></li>
+          <li class="nav-item"><button class="btn btn-header psychic" id="psychic" aria-label="Filtrar por tipo Psychic">Psychic</button></li>
+          <li class="nav-item"><button class="btn btn-header bug" id="bug" aria-label="Filtrar por tipo Bug">Bug</button></li>
+          <li class="nav-item"><button class="btn btn-header rock" id="rock" aria-label="Filtrar por tipo Rock">Rock</button></li>
+          <li class="nav-item"><button class="btn btn-header ghost" id="ghost" aria-label="Filtrar por tipo Ghost">Ghost</button></li>
+          <li class="nav-item"><button class="btn btn-header dark" id="dark" aria-label="Filtrar por tipo Dark">Dark</button></li>
+          <li class="nav-item"><button class="btn btn-header dragon" id="dragon" aria-label="Filtrar por tipo Dragon">Dragon</button></li>
+          <li class="nav-item"><button class="btn btn-header steel" id="steel" aria-label="Filtrar por tipo Steel">Steel</button></li>
+          <li class="nav-item"><button class="btn btn-header fairy" id="fairy" aria-label="Filtrar por tipo Fairy">Fairy</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="pokemon-container">
+      <div class="buscador" id="buscador">
+        <input type="text" id="buscar-input" placeholder="Nombre de Pokémon">
+        <button class="buscar-btn btn btn-header electric">Buscar</button>
+      </div>
+      <h3>Últimas búsquedas</h3>
+      <div id="ultimas-busquedas"></div>
+
+      <section id="seccion-inicio">
+
+        <div id="paginacion"></div>
+
+        <div id="todos">
+          <div class="pokemon-todos" id="listaPokemon">
+            <!-- acá va el renderizado con JS -->
+          </div>
+        </div>
+
+        <div id="paginacion"></div>
+      </section>
+
+      <!-- Sección Favoritos -->
+      <section id="seccion-favoritos" style="display: none;">
+        <h2>Mis favoritos ⭐</h2>
+        <div id="paginacion-favoritos"></div>
+        <div class="pokemon-todos" id="listaFavoritos"></div>
+        <div id="paginacion-favoritos"></div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- Modal para mostrar detalles de Pokémon -->
+  <div id="pokemon-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
