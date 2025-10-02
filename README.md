@@ -20,4 +20,8 @@ Este es un proyecto de **Pokédex interactiva** hecho con **HTML, CSS y JavaScri
 ## 🚀 Cómo usar
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/JuanStKennedy/PokeAppJS
+   git clone https://github.com/JuanStKennedy/PokeAppJS```
+
+## 🌐 Ver en vivo
+Puedes ver la Pokédex en acción aquí: [Ver Pokédex](https://juanstkennedy.github.io/PokeAppJS/)
+
