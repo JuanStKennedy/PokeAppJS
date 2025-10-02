@@ -81,14 +81,10 @@ body {
   color: var(--clr-black);
 }
 
-/* Asegurar que el texto general use el color correcto */
 h1, h2, h3, h4, h5, h6, p, span, div {
   color: var(--clr-black);
 }
 
-
-
-/* Header Structure */
 .header {
   background-color: var(--clr-white);
   border-bottom: 2px solid var(--clr-gray);
@@ -166,7 +162,7 @@ h1, h2, h3, h4, h5, h6, p, span, div {
   gap: .5rem;
 }
 
-/* Menu Toggle (Hamburger) */
+/* Menu Hamburgesa para mobiles */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -357,7 +353,7 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 .tipo {
     padding: .5rem .7rem;
     margin-top: 1rem;
-    font-size: 0.8rem; /* ligeramente más grande */
+    font-size: 0.8rem; 
     border-radius: 100vmax;
     text-transform: uppercase;
 }
@@ -370,12 +366,12 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablet/móvil */
   }
 
-  /* Show hamburger menu */
+  
   .menu-toggle {
     display: flex;
   }
 
-  /* Hide filters by default on mobile */
+ 
   .nav-filters {
     display: none;
     position: absolute;
